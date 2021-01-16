@@ -100,4 +100,7 @@ input
     footer{
         width: 175%;
     }
+    form{
+        margin-left: 75%;
+    }
 }
