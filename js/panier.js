@@ -1,3 +1,8 @@
+document.getElementById('image').innerHTML = localStorage.getItem('image');
+document.getElementById('nom').innerHTML = localStorage.getItem('nom');
+document.getElementById('prix').innerHTML = localStorage.getItem('prix');
+document.getElementById('quantite').innerHTML = localStorage.getItem('quantite');
+
 let formValid = document.getElementById("button");
 formValid.addEventListener('click', function(e) {
     let formInvalid = "";
