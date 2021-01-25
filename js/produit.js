@@ -2,7 +2,6 @@ const leproduit = document.getElementById('leproduit');
 let url = window.location.search;
 let searchParams = new URLSearchParams(url);
 
-
 let id = searchParams.get("id"); 
 fetch("http://localhost:3000/api/cameras/" + id)
 .then(response => {
@@ -36,6 +35,9 @@ fetch("http://localhost:3000/api/cameras/" + id)
        <button id = "commander" type = "button" >Ajouter au panier</button>
       </form>   
     `;
+    let prixUnitaire = document.getElementById('prix').value;
+    let nombreArticle = document.getElementById('quantity').value;
+    let prixTotal = prixUnitaire * nombreArticle;
         let commande = document.getElementById('commander');
             commande.addEventListener('click', function() {
                 localStorage.setItem('id', document.getElementById('id_produit').value);
@@ -43,22 +45,12 @@ fetch("http://localhost:3000/api/cameras/" + id)
                 localStorage.setItem('prix', document.getElementById('prix').value);
                 localStorage.setItem('image', document.getElementById('image').value);
                 localStorage.setItem('quantite', document.getElementById('quantity').value);
+                localStorage.setItem('prix totale', prixTotal);
             alert('votre produit à été ajouté au panier');
     }); 
     
     
 })
  
-   
-/* let detailsProduit = [];
-    let myProduct = { 
-        id : document.getElementById('id_produit'),
-        nom : document.getElementById('nomProduit'), 
-        prix : document.getElementById('prix'),
-        image : document.getElementById('image'),
-        quantite : document.getElementById('quantity')
-    };
-    detailsProduit.push(myProduct);
-    console.log(myProduct) */
 
     
