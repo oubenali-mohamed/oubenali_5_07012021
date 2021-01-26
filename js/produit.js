@@ -32,25 +32,37 @@ fetch("http://localhost:3000/api/cameras/" + id)
         <select id="objectif">
             ${options}
         </select> </br>       
-       <button id = "commander" type = "button" >Ajouter au panier</button>
+       <button id = "ajoutPanier" type = "button" >Ajouter au panier</button>
       </form>   
     `;
     let prixUnitaire = document.getElementById('prix').value;
     let nombreArticle = document.getElementById('quantity').value;
-    let prixTotal = prixUnitaire * nombreArticle;
-        let commande = document.getElementById('commander');
-            commande.addEventListener('click', function() {
+    let prixTotal = (prixUnitaire * nombreArticle);
+        let panier = document.getElementById('ajoutPanier');
+            panier.addEventListener('click', function() {
                 localStorage.setItem('id', document.getElementById('id_produit').value);
                 localStorage.setItem('nom', document.getElementById('nomProduit').value);
                 localStorage.setItem('prix', document.getElementById('prix').value);
                 localStorage.setItem('image', document.getElementById('image').value);
                 localStorage.setItem('quantite', document.getElementById('quantity').value);
                 localStorage.setItem('prix totale', prixTotal);
-            alert('votre produit à été ajouté au panier');
-    }); 
+            alert('votre produit à été ajouté au panier');  
+        }); 
+    })
     
-    
-})
+    /* const theProduct = [];
+    let theproductDetail = {
+        id: document.getElementById('id_produit').value,
+        nom : document.getElementById('nomProduit').value,
+        prix : document.getElementById('prix').value,
+        image : document.getElementById('image').value,
+        quantite : document.getElementById('quantity').value,
+};
+theProduct.push(theproductDetail); console.log(theProduct)
+localStorage.setItem('panier', theProduct);
+alert('votre produit à été ajouté au panier'); */
+            
  
+
 
     

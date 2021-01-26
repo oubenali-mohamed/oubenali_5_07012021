@@ -55,7 +55,12 @@ footer
     font-weight: bold;
     margin-right: 20px;
 }
-
+#image{
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 30%;
+    height: 30%;
+}
 img:not(.logo){
     width: 50%;
     height: 350px;;

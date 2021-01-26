@@ -1,4 +1,4 @@
-document.getElementById('image').innerHTML = localStorage.getItem('image');
+document.getElementById('image').src =  localStorage.getItem('image');
 document.getElementById('nom').innerHTML = localStorage.getItem('nom');
 document.getElementById('prix').innerHTML = localStorage.getItem('prix');
 document.getElementById('quantite').innerHTML = localStorage.getItem('quantite');
