@@ -1,8 +1,8 @@
 document.getElementById('image').src =  localStorage.getItem('image');
-document.getElementById('nom').innerHTML = localStorage.getItem('nom');
-document.getElementById('prix').innerHTML = localStorage.getItem('prix');
-document.getElementById('quantite').innerHTML = localStorage.getItem('quantite');
-document.getElementById('prixTotal').innerHTML = localStorage.getItem('prix totale');
+document.getElementById('nom').innerHTML = "votre article: " + localStorage.getItem('nom');
+document.getElementById('prix').innerHTML = "Prix unitaire: " + localStorage.getItem('prix') + " €";
+document.getElementById('quantite').innerHTML = "Nombre d'article : " + localStorage.getItem('quantite');
+document.getElementById('prixTotal').innerHTML = "Prix total de votre commande: " + localStorage.getItem('prix totale') + " €";
 
 let formValid = document.getElementById("button");
 formValid.addEventListener('click', function(e) {
@@ -28,7 +28,7 @@ formValid.addEventListener('click', function(e) {
       formInvalid += "Votre mail est invalide \n";
     }
     if (formInvalid) {
-      e.preventDefault()
+      e.preventDefault();
       alert("Erreur : \n" + formInvalid);
     }
 });

@@ -17,13 +17,17 @@
     </header>
 
     <div class="main">
-        <img id="image" src="../images/" alt="image appareil photo"><br>
-        <span id="nom"></span><br>
-        <span id="prix"></span><br>
-        <span id="quantite"></span><br>
-        <span id="prixTotal"></span>
+        <div>
+            <img id="image" src="../images/" alt="image appareil photo">
+        </div>
+        <div class="info">
+            <p id="nom"></p>
+            <p id="prix"></p>
+            <p id="quantite"></p>
+            <p id="prixTotal"></p>
+        </div>
     </div>
-    <form id="form" action="confirmation.html" method="POST">
+    <form id="form" action="confirmation.html" method="GET">
         <label for="prenom"><input type="text" id="prenom" placeholder="Votre Prénom"/></label>
         <label for="nom"><input type="text" id="nom" placeholder="Votre Nom"/></label>
         <label for="adresse"><input type="text" id="addresse" placeholder="Votre Adresse"/></label>
