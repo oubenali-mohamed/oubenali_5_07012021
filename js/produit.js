@@ -36,19 +36,32 @@ fetch("http://localhost:3000/api/cameras/" + id)
       </form>   
     `;
     let prixUnitaire = document.getElementById('prix').value;
-    let nombreArticle = document.getElementById('quantity').value;
-    let prixTotal = (prixUnitaire * nombreArticle);
+   
         let panier = document.getElementById('ajoutPanier');
-            panier.addEventListener('click', function() {
-                localStorage.setItem('id', document.getElementById('id_produit').value);
-                localStorage.setItem('nom', document.getElementById('nomProduit').value);
-                localStorage.setItem('prix', document.getElementById('prix').value);
-                localStorage.setItem('image', document.getElementById('image').value);
-                localStorage.setItem('quantite', document.getElementById('quantity').value);
-                localStorage.setItem('prix totale', prixTotal);
-            alert('votre produit à été ajouté au panier');  
+            panier.addEventListener('click', function rajout() {
+                let nombreArticle = document.getElementById('quantity').value;
+                let prixTotal = prixUnitaire * nombreArticle;
+                let _produit = {
+                    'id': document.getElementById('id_produit').value,
+                    'nom': document.getElementById('nomProduit').value,
+                    'prix': document.getElementById('prix').value,
+                    'quantite' : document.getElementById('quantity').value,
+                    'lentille' : document.getElementById('objectif').value,
+                    'prixTotal' : prixTotal
+                }
+                let panierLocalStorage = localStorage.getItem('panier');
+                if(panierLocalStorage == null) {
+                    panierLocalStorage = [];
+                } else{
+                    panierLocalStorage = JSON.parse(panierLocalStorage);
+                }
+                panierLocalStorage.push(_produit);
+                localStorage.setItem('panier', JSON.stringify(panierLocalStorage));
+                alert('votre produit à été ajouté au panier');  
         }); 
     })
+    
+    
     
     /* const theProduct = [];
     let theproductDetail = {

@@ -8,8 +8,8 @@ fetch("http://localhost:3000/api/cameras")
         return Promise.reject(response.status);
     }
 })
-.then(data => { console.log(data)
-    data.forEach((objet) => { 
+.then(data => {
+    data.forEach((objet) => {
         produit.innerHTML += ` 
         <a href="produit.html?id=${objet._id}">
             <h1>${objet.name}</h1> 

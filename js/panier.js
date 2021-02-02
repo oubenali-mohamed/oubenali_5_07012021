@@ -1,8 +1,22 @@
+/* 
 document.getElementById('image').src =  localStorage.getItem('image');
 document.getElementById('nom').innerHTML = "votre article: " + localStorage.getItem('nom');
 document.getElementById('prix').innerHTML = "Prix unitaire: " + localStorage.getItem('prix') + " €";
 document.getElementById('quantite').innerHTML = "Nombre d'article : " + localStorage.getItem('quantite');
 document.getElementById('prixTotal').innerHTML = "Prix total de votre commande: " + localStorage.getItem('prix totale') + " €";
+document.getElementById('objectif').innerHTML = "lentille choisi : " + localStorage.getItem('lentille'); */
+let panierLocalStorage = localStorage.getItem('panier');
+if(panierLocalStorage == null) {
+    alert('panier vide');
+} else{
+    panierLocalStorage = JSON.parse(panierLocalStorage);console.log(panierLocalStorage) 
+      for( let i = 0; i < panierLocalStorage.length; i++) { 
+       document.getElementById('nom').innerHTML +=  panierLocalStorage[i].nom + " ";
+      document.getElementById('prix').innerHTML +=  panierLocalStorage[i].prix + " € ";
+      document.getElementById('quantite').innerHTML += panierLocalStorage[i].quantite + " ";
+      document.getElementById('prixTotal').innerHTML +=  panierLocalStorage[i].prixTotal + " € ";  
+    }
+  }
 
 let formValid = document.getElementById("button");
 formValid.addEventListener('click', function(e) {

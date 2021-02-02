@@ -88,14 +88,23 @@ input
     text-align: center;
 }
 .main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin-left: 150px;
+    margin-top: 50px;
 }
 #principal{
     text-align: center;
     font-size: 22px;
     height: 200px;
+}
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
 }
 @media screen and (max-width: 480px){
     body{
@@ -143,6 +152,9 @@ input
     .info > p{
         margin-left: 100px;
         margin-right: -150px;
+    }
+    #principal{
+        color: rgb(5, 105, 5);
     }
     h1{
         font-size: 20px;

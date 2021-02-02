@@ -17,15 +17,31 @@
     </header>
 
     <div class="main">
-        <div>
-            <img id="image" src="../images/" alt="image appareil photo">
-        </div>
-        <div class="info">
-            <p id="nom"></p>
-            <p id="prix"></p>
-            <p id="quantite"></p>
-            <p id="prixTotal"></p>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">votre commande</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>nom</td>
+                    <td id="nom"></td>
+                </tr>
+                <tr>
+                    <td>quantité</td>
+                    <td id="quantite"></td>
+                </tr>
+                <tr>
+                    <td>prix Unitaire</td>
+                    <td id="prix"></td>
+                </tr>
+                <tr>
+                    <td>prix total</td>
+                    <td id="prixTotal"></td>
+                </tr>
+            </tbody>
+        </table> 
     </div>
     <form id="form" action="confirmation.html" method="GET">
         <label for="prenom"><input type="text" id="prenom" placeholder="Votre Prénom"/></label>
