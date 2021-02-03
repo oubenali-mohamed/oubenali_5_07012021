@@ -14,7 +14,7 @@ fetch("http://localhost:3000/api/cameras")
         <a href="produit.html?id=${objet._id}">
             <h1>${objet.name}</h1> 
             <img src = "${objet.imageUrl}" alt = "${objet.name}" </br>
-            <h3>${objet.price} €</h3>
+            <h3>${objet.price/100} €</h3>
         </a>
         ` 
         }) 

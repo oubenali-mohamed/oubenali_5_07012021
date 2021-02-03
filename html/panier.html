@@ -18,32 +18,23 @@
 
     <div class="main">
         <table>
-            <thead>
-                <tr>
-                    <th colspan="2">votre commande</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>nom</td>
-                    <td id="nom"></td>
-                </tr>
-                <tr>
-                    <td>quantité</td>
-                    <td id="quantite"></td>
-                </tr>
-                <tr>
-                    <td>prix Unitaire</td>
-                    <td id="prix"></td>
-                </tr>
-                <tr>
-                    <td>prix total</td>
-                    <td id="prixTotal"></td>
-                </tr>
-            </tbody>
-        </table> 
+            <caption>Votre commande</caption>
+
+            <tr>
+                <th>Article</th>
+                <th>Prix</th>
+                <th>Qauntité</th>
+                <th>Prix Total</th>
+            </tr>
+            <tr>
+                <td id="nom"></td>
+                <td id="prix"></td>
+                <td id="quantite"></td>
+                <td id="prixTotal"></td>
+            </tr>
+        </table>
     </div>
-    <form id="form" action="confirmation.html" method="GET">
+    <form id="form" action="confirmation.html" method="POST">
         <label for="prenom"><input type="text" id="prenom" placeholder="Votre Prénom"/></label>
         <label for="nom"><input type="text" id="nom" placeholder="Votre Nom"/></label>
         <label for="adresse"><input type="text" id="addresse" placeholder="Votre Adresse"/></label>

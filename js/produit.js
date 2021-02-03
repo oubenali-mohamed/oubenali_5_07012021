@@ -20,7 +20,7 @@ fetch("http://localhost:3000/api/cameras/" + id)
         <h1>${data.name}</h1> 
         <img src = "${data.imageUrl}" alt = "${data.name}" </br>
         <p>${data.description}</p>
-        <h3>${data.price} €</h3>
+        <h3>${data.price/100} €</h3>
         <form>
         <label for="exemplaires">exemplaires:</label>
         <input id="quantity" type="number" value="1"/>

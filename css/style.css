@@ -96,16 +96,21 @@ input
     font-size: 22px;
     height: 200px;
 }
-table,
-td {
-    border: 1px solid #333;
+caption{
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+table {
+    border: 1px solid #000;
+    width: 40%;
+    border-collapse: collapse;
+}
+td,th{
+    border: 1px solid #000;
+    border-collapse: collapse;
 }
 
-thead,
-tfoot {
-    background-color: #333;
-    color: #fff;
-}
 @media screen and (max-width: 480px){
     body{
         width: auto;

@@ -11,10 +11,10 @@ if(panierLocalStorage == null) {
 } else{
     panierLocalStorage = JSON.parse(panierLocalStorage);console.log(panierLocalStorage) 
       for( let i = 0; i < panierLocalStorage.length; i++) { 
-       document.getElementById('nom').innerHTML +=  panierLocalStorage[i].nom + " ";
-      document.getElementById('prix').innerHTML +=  panierLocalStorage[i].prix + " € ";
-      document.getElementById('quantite').innerHTML += panierLocalStorage[i].quantite + " ";
-      document.getElementById('prixTotal').innerHTML +=  panierLocalStorage[i].prixTotal + " € ";  
+      document.getElementById('nom').innerHTML +=  panierLocalStorage[i].nom + " </br>";
+      document.getElementById('prix').innerHTML +=  panierLocalStorage[i].prix/100 + " € </br>";
+      document.getElementById('quantite').innerHTML += panierLocalStorage[i].quantite + " </br>";
+      document.getElementById('prixTotal').innerHTML +=  panierLocalStorage[i].prixTotal/100 + " € </br> ";  
     }
   }
 
@@ -44,6 +44,17 @@ formValid.addEventListener('click', function(e) {
     if (formInvalid) {
       e.preventDefault();
       alert("Erreur : \n" + formInvalid);
+    }
+    else {
+      let user = {
+        prenom: prenom,
+        nom: nom,
+        adresse: adresse,
+        ville: ville,
+        email: email
+      };
+      let send = { user, panierLocalStorage};
+      send = JSON.stringify(send);
     }
 });
 
