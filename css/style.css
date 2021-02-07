@@ -1,19 +1,18 @@
-body
-{
+body {
     padding: 0;
     margin: 0;
     background-color: #d8d5d5;
 }
-a:not(.contact)
-{
+
+a:not(.contact) {
     text-decoration: none;
-    color:#000;
+    color: #000;
     margin-right: 40px;
     font-size: 26px;
     font-weight: bold;
 }
-header 
-{
+
+header {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -21,25 +20,25 @@ header
     align-items: center;
     background-color: white;
 }
-h1
-{
+
+h1 {
     text-align: center;
     font-size: 50px;
     margin-top: 100px;
 }
-h3
-{
+
+h3 {
     text-align: center;
     font-size: 30px;
 }
-p
-{
+
+p {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
 }
-footer
-{
+
+footer {
     font-size: 25px;
     text-transform: uppercase;
     margin-top: 100px;
@@ -49,78 +48,91 @@ footer
     background-color: white;
     height: 100px;
 }
-.contact{
+
+.contact {
     text-decoration: none;
     color: #000;
     font-weight: bold;
     margin-right: 20px;
 }
-#image{
+
+#image {
     margin-left: 200px;
     margin-top: 50px;
     width: 30%;
     height: 60%;
 }
-.info > p{
+
+.info>p {
     margin-right: 150px;
     font-size: 16px;
     display: inline-block;
 }
-img:not(.logo){
+
+img:not(.logo) {
     width: 50%;
     height: 350px;
     border-radius: 30px;
     margin-left: 25%;
 }
-form 
-{
+
+form {
     margin: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
-input 
-{
+
+input {
     width: 400px;
     padding: 5px;
     margin: 10px;
     text-align: center;
 }
-.main{
-    margin-left: 150px;
+
+.main {
+    width: 100%;
     margin-top: 50px;
 }
-#principal{
+
+#principal {
     text-align: center;
     font-size: 22px;
     height: 200px;
 }
-caption{
+
+caption {
     margin-bottom: 20px;
     font-size: 22px;
     font-weight: bold;
 }
+
 table {
     border: 1px solid #000;
-    width: 40%;
+    width: 30%;
     border-collapse: collapse;
+    margin: auto;
 }
-td,th{
+
+td,
+th {
     border: 1px solid #000;
     border-collapse: collapse;
 }
 
-@media screen and (max-width: 480px){
-    body{
+@media screen and (max-width: 480px) {
+    body {
         width: auto;
         height: auto;
     }
-    .logo{
+
+    .logo {
         width: 150px;
         margin-left: 50px;
     }
-    header{
+
+    header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -128,43 +140,54 @@ td,th{
         margin-bottom: 80px;
         padding-bottom: 50px;
     }
-    .menu{
+
+    .menu {
         margin: 0px 0px 0px 0px;
-        }
-    img:not(.logo){
+    }
+
+    img:not(.logo) {
         width: auto;
         border-radius: 30px;
         margin-left: 20%;
     }
-    h1, h3{
+
+    h1,
+    h3 {
         margin-left: 80%;
         font-size: 20px;
     }
-    footer{
+
+    footer {
         width: 175%;
         height: 300px;
     }
-    form{
+
+    form {
         margin-top: 100px;
         margin-left: 75%;
     }
-    #image{
+
+    #image {
         width: 80%;
         height: 60%;
         margin-left: 60px;
         margin-right: 100px;
     }
-    .info > p{
+
+    .info>p {
         margin-left: 100px;
         margin-right: -150px;
     }
-    #principal{
-        color: rgb(5, 105, 5);
+
+    table {
+        margin: 0 0 0 220px;
     }
-    h1{
+
+    h1 {
         font-size: 20px;
     }
-    h2{
+
+    h2 {
         font-size: 15px;
         margin-top: 40px;
     }
