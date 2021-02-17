@@ -101,7 +101,10 @@ input {
     font-size: 22px;
     height: 200px;
 }
-
+#choix{
+    color: red;
+    display: inline-block;
+}
 caption {
     margin-bottom: 20px;
     font-size: 22px;

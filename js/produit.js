@@ -3,7 +3,7 @@ let url = window.location.search;
 let searchParams = new URLSearchParams(url);
 
 let id = searchParams.get("id");
-fetch("http://localhost:3000/api/cameras/" + id)
+fetch("Access-Control-Allow-Origin: http://localhost:3000/api/cameras/" + id)
   .then((response) => {
     // vérification de la connection au serveur
     if (response.ok) {
@@ -46,7 +46,7 @@ fetch("http://localhost:3000/api/cameras/" + id)
     panier.addEventListener("click", function rajout() {
       let nombreArticle = document.getElementById("quantity").value;
       let prixTotal = prixUnitaire * nombreArticle;
-      let _produit = {
+      let _produit = { 
         id: document.getElementById("id_produit").value,
         nom: document.getElementById("nomProduit").value,
         prix: document.getElementById("prix").value,

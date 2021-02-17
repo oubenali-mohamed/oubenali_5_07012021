@@ -28,9 +28,10 @@ formValid.addEventListener("click", function (e) {
   let addresse = document.getElementById("addresse").value;
   let ville = document.getElementById("ville").value;
   let email = document.getElementById("mail").value;
+  
   if (/[0-9]/.test(prenom) || /[§!@#$%^&*().?":{}|<>]/.test(prenom)) {
     formInvalid += "Votre prénom est invalide \n";
-  }
+  } 
   if (/[0-9]/.test(nom) || /[§!@#$%^&*().?":{}|<>]/.test(nom)) {
     formInvalid += "Votre nom de famille est invalide \n";
   }
@@ -61,9 +62,9 @@ formValid.addEventListener("click", function (e) {
 
     let send = { contact: contact, products: products };
     send = JSON.stringify(send);
-    console.log(send);
-
-    fetch("http://localhost:3000/api/cameras/order", {
+    
+  
+    fetch("Access-Control-Allow-Origin: http://localhost:3000/api/cameras/order", {
       method: "POST",
       body: send,
       headers: {
@@ -73,8 +74,7 @@ formValid.addEventListener("click", function (e) {
       .then(function (response) {
         // si connection réussi ajouter orderId au localStorage et redirection ver la page confirlation.html
         if (response.ok) {
-          response.json().then(function (data) {
-            console.log(data);
+          response.json().then(function (data) { 
             localStorage.setItem("orderId", data.orderId);
             window.location.href = "confirmation.html";
           });
