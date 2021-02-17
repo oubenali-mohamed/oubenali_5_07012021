@@ -1,6 +1,6 @@
 const produit = document.getElementById("produit");
 
-fetch("Access-Control-Allow-Origin: http://localhost:3000/api/cameras")
+fetch("https://monorinoco.herokuapp.com/api/cameras")
   .then((response) => {
     // vérification de la connection au serveur
     if (response.ok) { 

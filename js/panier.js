@@ -64,7 +64,7 @@ formValid.addEventListener("click", function (e) {
     send = JSON.stringify(send);
     
   
-    fetch("Access-Control-Allow-Origin: http://localhost:3000/api/cameras/order", {
+    fetch("https://monorinoco.herokuapp.com/api/cameras/order", {
       method: "POST",
       body: send,
       headers: {
