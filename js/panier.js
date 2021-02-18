@@ -15,9 +15,10 @@ if (panierLocalStorage == null) {
     document.getElementById("quantite").innerHTML +=
       panierLocalStorage[i].quantite + " </br>";
     document.getElementById("prixTotal").innerHTML +=
-      panierLocalStorage[i].prixTotal / 100 + " € </br> ";
+      panierLocalStorage[i].prixTotal / 100 + " € </br> "; 
   }
 }
+
 // vérification des entrées du formulaire avec les regex
 let formValid = document.getElementById("button");
 formValid.addEventListener("click", function (e) {
@@ -74,7 +75,7 @@ formValid.addEventListener("click", function (e) {
       .then(function (response) {
         // si connection réussi ajouter orderId au localStorage et redirection ver la page confirlation.html
         if (response.ok) {
-          response.json().then(function (data) { 
+          response.json().then(function (data) {
             localStorage.setItem("orderId", data.orderId);
             window.location.href = "confirmation.html";
           });

@@ -63,6 +63,7 @@ fetch("https://monorinoco.herokuapp.com/api/cameras/" + id)
       }
       panierLocalStorage.push(_produit);
       localStorage.setItem("panier", JSON.stringify(panierLocalStorage));
+      localStorage.setItem("prixCommande", prixTotal/100);
       alert("votre produit à été ajouté au panier");
     });
   });
