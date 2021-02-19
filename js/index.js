@@ -1,6 +1,6 @@
 const produit = document.getElementById("produit");
 
-fetch("https://monorinoco.herokuapp.com/api/cameras")
+fetch("http://localhost:3000/api/cameras")
   .then((response) => {
     // vérification de la connection au serveur
     if (response.ok) { 

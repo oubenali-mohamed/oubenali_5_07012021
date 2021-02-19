@@ -65,7 +65,7 @@ formValid.addEventListener("click", function (e) {
     send = JSON.stringify(send);
     
   
-    fetch("https://monorinoco.herokuapp.com/api/cameras/order", {
+    fetch("http://localhost:3000/api/cameras/order", {
       method: "POST",
       body: send,
       headers: {
