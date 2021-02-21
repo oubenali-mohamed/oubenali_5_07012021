@@ -1,6 +1,7 @@
 const produit = document.getElementById("produit");
+let url = "http://localhost:3000/api/cameras";
 
-fetch("http://localhost:3000/api/cameras")
+fetch(url)
   .then((response) => {
     // vérification de la connection au serveur
     if (response.ok) { 

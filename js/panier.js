@@ -64,8 +64,9 @@ formValid.addEventListener("click", function (e) {
     let send = { contact: contact, products: products };
     send = JSON.stringify(send);
     
-  
-    fetch("http://localhost:3000/api/cameras/order", {
+    let url = "http://localhost:3000/api/cameras/order";
+    
+    fetch(url , {
       method: "POST",
       body: send,
       headers: {

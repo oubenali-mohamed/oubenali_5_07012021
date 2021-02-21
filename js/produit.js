@@ -3,7 +3,9 @@ let url = window.location.search;
 let searchParams = new URLSearchParams(url);
 
 let id = searchParams.get("id");
-fetch("http://localhost:3000/api/cameras/" + id)
+let urlProduit = "http://localhost:3000/api/cameras/" + id ;
+
+fetch(urlProduit)
   .then((response) => {
     // vérification de la connection au serveur
     if (response.ok) {
